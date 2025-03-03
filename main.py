@@ -110,7 +110,7 @@ def get_jobs(request: JobSearchRequest):
         # Try parsing the response as JSON (assuming agent.run() may return a string)
         try:
             print(response)
-            parsed_response = json.loads(response)
+            parsed_response = response
             return parsed_response
         except json.JSONDecodeError:
             # If parsing fails, assume it's already a list of dicts or return as-is
